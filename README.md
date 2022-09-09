@@ -1,4 +1,4 @@
-# Hijri
+# Hijriyah Indonesia
 
 Hijriyah Calendar Converter
 
