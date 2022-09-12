@@ -3,7 +3,7 @@ library hijri;
 import 'package:hijriyah_indonesia/digits_converter.dart';
 import 'hijriyah_array.dart';
 
-class HijriyahIndonesia {
+class Hijriyah {
   static String language = 'en';
   late int lengthOfMonth;
   int hDay = 1;
@@ -37,29 +37,28 @@ class HijriyahIndonesia {
   };
 
   // Consider switching to the factory pattern
-  factory HijriyahIndonesia.setLocal(String locale) {
+  factory Hijriyah.setLocal(String locale) {
     language = locale;
-    return HijriyahIndonesia();
+    return Hijriyah();
   }
 
-  HijriyahIndonesia();
+  Hijriyah();
 
-  HijriyahIndonesia.fromDate(DateTime date) {
+  Hijriyah.fromDate(DateTime date) {
     gregorianToHijri(date.year, date.month, date.day);
   }
 
-  HijriyahIndonesia.now() {
+  Hijriyah.now() {
     _now();
   }
 
-  HijriyahIndonesia.addMonth(int year, int month) {
+  Hijriyah.addMonth(int year, int month) {
     hYear = month % 12 == 0 ? year - 1 : year;
     hMonth = month % 12 == 0 ? 12 : month % 12;
     hDay = 1;
   }
 
-  HijriyahIndonesia.addLocale(
-      String locale, Map<String, Map<int, String>> names) {
+  Hijriyah.addLocale(String locale, Map<String, Map<int, String>> names) {
     _local[locale] = names;
   }
 
