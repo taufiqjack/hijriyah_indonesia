@@ -34,6 +34,10 @@ class Hijriyah {
       'days': trWkNames,
       'short_days': trShortWdNames
     },
+    'jv': {
+      'long': jvMonthNames,
+      'days': jvWdNames,
+    }
   };
 
   // Consider switching to the factory pattern
@@ -373,4 +377,6 @@ class Hijriyah {
     }
     return calender;
   }
+
+  fromDate(DateTime local) {}
 }
