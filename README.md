@@ -18,7 +18,7 @@ Hijriyah Calendar Converter
 
 ##### Usage convert
 ```
-Hijriyah.fromDate(DateTime.parse(dateTime.toString()).toLocal()).toFormat("dd MMMM yyyy");
+Hijriyah.fromDate(DateTime.now()).toFormat("dd MMMM yyyy");
 ```
  ##### Change Local
 ```dart
