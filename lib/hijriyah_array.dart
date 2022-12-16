@@ -1,14 +1,14 @@
 const Map<int, String> monthNames = {
   1: 'Muharam',
   2: 'Shafar',
-  3: 'Rabiul AWal',
+  3: 'Rabiul Awal',
   4: 'Rabiul Akhir',
-  5: 'Jumadil Awwal',
+  5: 'Jumadil Awal',
   6: 'Jumadil Akhir',
   7: 'Rajab',
   8: 'Syakban',
   9: 'Ramadan',
-  10: 'Syawwal',
+  10: 'Syawal',
   11: 'Zulkaidah',
   12: 'Zulhijjah'
 };
