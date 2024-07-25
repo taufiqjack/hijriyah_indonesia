@@ -1,9 +1,8 @@
-import 'package:flutter_test/flutter_test.dart';
-
+import 'package:flutter/foundation.dart';
 import 'package:hijriyah_indonesia/hijriyah_indonesia.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final hijriyah = Hijriyah();
-  });
+  debugPrint(Hijriyah.fromDate(DateTime.parse('20240725').toLocal())
+      .toFormat("dd MMMM yyyy")
+      .toString());
 }

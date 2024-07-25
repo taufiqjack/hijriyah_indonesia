@@ -5,6 +5,11 @@ String locale = 'ar';
 
 void main() {
   Hijriyah today = Hijriyah.now();
+
+/* converter to hijriyah indonesia */
+  Hijriyah.fromDate(DateTime.parse('20240725').toLocal())
+      .toFormat("dd MMMM yyyy");
+
   Hijriyah.setLocal(locale);
   if (kDebugMode) {
     print(today.hYear);
