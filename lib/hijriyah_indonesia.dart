@@ -1,6 +1,7 @@
 library hijri;
 
 import 'package:hijriyah_indonesia/digits_converter.dart';
+import 'package:hijriyah_indonesia/exstensions/word_extention.dart';
 import 'hijriyah_array.dart';
 
 class Hijriyah {
@@ -21,6 +22,12 @@ class Hijriyah {
       'short': monthShortNames,
       'days': wdNames,
       'short_days': shortWdNames
+    },
+    'id': {
+      'long': idMonthNames,
+      'short': idMonthShortNames,
+      'days': idWdNames,
+      'short_days': idShortWdNames
     },
     'ar': {
       'long': arMonthNames,
@@ -207,7 +214,10 @@ class Hijriyah {
   }
 
   String toFormat(String format) {
-    return this.format(hYear, hMonth, hDay, format);
+    return this
+        .format(hYear, hMonth, hDay, format)
+        .toLowerCase()
+        .toCapitalize();
   }
 
   String format(year, month, day, format) {
@@ -237,9 +247,9 @@ class Hijriyah {
 
     //=========== Day Name =============//
     // Friday
-    if (newFormat.contains("DDDD")) {
+    if (newFormat.contains("EEEE")) {
       newFormat = newFormat.replaceFirst(
-          "DDDD", "${_local[language]!['days']![wkDay ?? weekDay()]}");
+          "EEEE", "${_local[language]!['days']![wkDay ?? weekDay()]}");
 
       // Fri
     } else if (newFormat.contains("DD")) {

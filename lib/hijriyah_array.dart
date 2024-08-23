@@ -1,6 +1,6 @@
 const Map<int, String> monthNames = {
   1: 'Muharam',
-  2: 'Shafar',
+  2: 'Safar',
   3: 'Rabiul Awal',
   4: 'Rabiul Akhir',
   5: 'Jumadil Awal',
@@ -14,6 +14,35 @@ const Map<int, String> monthNames = {
 };
 
 const Map<int, String> monthShortNames = {
+  1: 'Muh',
+  2: 'Shaf',
+  3: 'RabAw',
+  4: 'RabAk',
+  5: 'JumAw',
+  6: 'JumAk',
+  7: 'Raj',
+  8: 'Syak',
+  9: 'Ram',
+  10: 'Syaw',
+  11: 'Zulk',
+  12: 'Zulh'
+};
+const Map<int, String> idMonthNames = {
+  1: 'Muharam',
+  2: 'Safar',
+  3: 'Rabiul Awal',
+  4: 'Rabiul Akhir',
+  5: 'Jumadil Awal',
+  6: 'Jumadil Akhir',
+  7: 'Rajab',
+  8: 'Syakban',
+  9: 'Ramadan',
+  10: 'Syawal',
+  11: 'Zulkaidah',
+  12: 'Zulhijjah'
+};
+
+const Map<int, String> idMonthShortNames = {
   1: 'Muh',
   2: 'Shaf',
   3: 'RabAw',
@@ -89,13 +118,13 @@ const Map<int, String> trMonthShortNames = {
 };
 
 const Map<int, String> wdNames = {
-  7: "Minggu",
-  1: "Senin",
-  2: "Selasa",
-  3: "Rabu",
-  4: "Kamis",
-  5: "Jumat",
-  6: "Sabtu"
+  7: "Sunday",
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday"
 };
 
 const Map<int, String> shortWdNames = {
@@ -106,6 +135,25 @@ const Map<int, String> shortWdNames = {
   4: "Thu",
   5: "Fri",
   6: "Sat"
+};
+const Map<int, String> idWdNames = {
+  7: "MINGGU",
+  1: "SENIN",
+  2: "SELASA",
+  3: "RABU",
+  4: "KAMIS",
+  5: "JUMAT",
+  6: "SABTU"
+};
+
+const Map<int, String> idShortWdNames = {
+  7: "MING",
+  1: "SEN",
+  2: "SEL",
+  3: "RAB",
+  4: "KAM",
+  5: "JUM",
+  6: "SAB"
 };
 
 const Map<int, String> arWkNames = {
