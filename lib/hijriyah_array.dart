@@ -15,7 +15,7 @@ const Map<int, String> monthNames = {
 
 const Map<int, String> monthShortNames = {
   1: 'Muh',
-  2: 'Shaf',
+  2: 'Saf',
   3: 'RabAw',
   4: 'RabAk',
   5: 'JumAw',
