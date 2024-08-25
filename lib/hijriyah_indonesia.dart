@@ -214,10 +214,7 @@ class Hijriyah {
   }
 
   String toFormat(String format) {
-    return this
-        .format(hYear, hMonth, hDay, format)
-        .toLowerCase()
-        .toCapitalize();
+    return this.format(hYear, hMonth, hDay, format).toLowerCase().toTitleCase();
   }
 
   String format(year, month, day, format) {
@@ -252,9 +249,9 @@ class Hijriyah {
           "EEEE", "${_local[language]!['days']![wkDay ?? weekDay()]}");
 
       // Fri
-    } else if (newFormat.contains("DD")) {
+    } else if (newFormat.contains("EE")) {
       newFormat = newFormat.replaceFirst(
-          "DD", "${_local[language]!['short_days']![wkDay ?? weekDay()]}");
+          "EE", "${_local[language]!['short_days']![wkDay ?? weekDay()]}");
     }
 
     //============== Month ========================//
@@ -333,7 +330,7 @@ class Hijriyah {
   List<int?> toList() => [hYear, hMonth, hDay];
 
   String fullDate() {
-    return format(hYear, hMonth, hDay, "DDDD, MMMM dd, yyyy");
+    return format(hYear, hMonth, hDay, "EEEE, MMMM dd, yyyy").toTitleCase();
   }
 
   bool isValid() {

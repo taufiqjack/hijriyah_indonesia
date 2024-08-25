@@ -15,15 +15,18 @@ Hijriyah Calendar Converter
   print(_today.lengthOfMonth); // 30 days
   print(_today.toFormat("MMMM dd yyyy")); //Shafar 14 1444
 ```
-
-##### Usage convert
-```
-Hijriyah.fromDate(DateTime.parse(dateTime.toString()).toLocal()).toFormat("dd MMMM yyyy");
-```
  ##### Change Local
 ```dart
+  String locale = 'id';
   Hijriyah.setLocal(locale);
 ```
+
+##### Usage convert
+```dart
+  Hijriyah.fromDate(DateTime.parse(dateTime.toString()).toLocal()).toFormat("EEEE, dd MMMM yyyy"); // Jumat, 19 Safar 1446
+  Hijriyah.fromDate(DateTime.parse(dateTime.toString()).toLocal()).toFormat("EE, dd MMMM yyyy") // Jum, 19 Safar 1446
+```
+
  ##### Add New Locale
 ```dart
   Hijriyah.addLocale(locale, {
