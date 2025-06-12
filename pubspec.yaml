@@ -1,11 +1,10 @@
 name: hijriyah_indonesia
 description: Convert between Hijri Calendar and Gregorian Calendar date support Arabic and Indonesia.
-version: 0.1.5
+version: 0.1.6
 homepage: https://github.com/taufiqjack/hijriyah_indonesia
 
 environment:
   sdk: ">=2.19.6 <4.0.0"
-  flutter: ">=1.17.0"
 
 dependencies:
   flutter:

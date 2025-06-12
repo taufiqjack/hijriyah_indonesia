@@ -6,14 +6,18 @@ import 'hijriyah_array.dart';
 
 class Hijriyah {
   static String language = 'en';
+  bool? pasaran;
   late int lengthOfMonth;
+  DateTime startKHGT = DateTime(2024, 7, 7);
   int hDay = 1;
   late int hMonth;
   late int hYear;
   int? wkDay;
+  int jPasaran = 0;
   late String longMonthName;
   late String shortMonthName;
   late String dayWeName;
+  late String pasaranName;
   Map<int, int>? adjustments;
 
   static final Map<String, Map<String, Map<int, String>>> _local = {
@@ -27,7 +31,8 @@ class Hijriyah {
       'long': idMonthNames,
       'short': idMonthShortNames,
       'days': idWdNames,
-      'short_days': idShortWdNames
+      'short_days': idShortWdNames,
+      'pasaran': pasaranNames
     },
     'ar': {
       'long': arMonthNames,
@@ -51,8 +56,9 @@ class Hijriyah {
 
   Hijriyah();
 
-  Hijriyah.fromDate(DateTime date) {
+  Hijriyah.fromDate(DateTime date, {bool isPasaran = false}) {
     gregorianToHijri(date.year, date.month, date.day);
+    pasaran = isPasaran;
   }
 
   Hijriyah.now() {
@@ -200,6 +206,7 @@ class Hijriyah {
     int wd = _gMod(cjdn + 1, 7);
 
     wkDay = wd == 0 ? 7 : wd;
+    jPasaran = _getPasaran(year, month, day);
     return hDate(iy, im, id);
   }
 
@@ -210,11 +217,18 @@ class Hijriyah {
     dayWeName = _local[language]!['days']![wkDay]!;
     shortMonthName = _local[language]!['short']![month]!;
     hDay = day;
+    if (pasaran == true) {
+      pasaranName = _local[language]!['pasaran']![jPasaran]!;
+    }
     return format(hYear, hMonth, hDay, "dd/mm/yyyy");
   }
 
   String toFormat(String format) {
     return this.format(hYear, hMonth, hDay, format).toLowerCase().toTitleCase();
+  }
+
+  bool isPasaran(bool value) {
+    return pasaran = value;
   }
 
   String format(year, month, day, format) {
@@ -252,6 +266,11 @@ class Hijriyah {
     } else if (newFormat.contains("EE")) {
       newFormat = newFormat.replaceFirst(
           "EE", "${_local[language]!['short_days']![wkDay ?? weekDay()]}");
+    }
+
+    if (newFormat.contains("PP")) {
+      newFormat = newFormat.replaceFirst(
+          "PP", "${_local[language]!['pasaran']![jPasaran]}");
     }
 
     //============== Month ========================//
@@ -330,7 +349,11 @@ class Hijriyah {
   List<int?> toList() => [hYear, hMonth, hDay];
 
   String fullDate() {
-    return format(hYear, hMonth, hDay, "EEEE, MMMM dd, yyyy").toTitleCase();
+    if (pasaran == true) {
+      return format(hYear, hMonth, hDay, "EEEE PP, dd MMMM yyyy").toTitleCase();
+    } else {
+      return format(hYear, hMonth, hDay, "EEEE, MMMM dd, yyyy").toTitleCase();
+    }
   }
 
   bool isValid() {
@@ -379,5 +402,14 @@ class Hijriyah {
       d = d < 7 ? d + 1 : 1;
     }
     return calender;
+  }
+
+  int _getPasaran(int year, int month, int day) {
+    //offset pasaran dari tanggal 7,7,2024 adalah kliwon
+    //bandingkan tanggal hari ini dengan base startKHGT
+    int diff = DateTime(year, month, day).difference(startKHGT).inDays;
+    int pasaran = _gMod(diff, 5) == 0 ? 5 : _gMod(diff, 5);
+
+    return pasaran;
   }
 }

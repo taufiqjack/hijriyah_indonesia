@@ -13,6 +13,14 @@ const Map<int, String> monthNames = {
   12: 'Zulhijjah'
 };
 
+const Map<int, String> pasaranNames = {
+  1: 'Legi',
+  2: 'Pahing',
+  3: 'Pon',
+  4: 'Wage',
+  5: 'Kliwon',
+};
+
 const Map<int, String> monthShortNames = {
   1: 'Muh',
   2: 'Saf',
@@ -39,12 +47,12 @@ const Map<int, String> idMonthNames = {
   9: 'Ramadan',
   10: 'Syawal',
   11: 'Zulkaidah',
-  12: 'Zulhijjah'
+  12: 'Zulhijah'
 };
 
 const Map<int, String> idMonthShortNames = {
   1: 'Muh',
-  2: 'Shaf',
+  2: 'Saf',
   3: 'RabAw',
   4: 'RabAk',
   5: 'JumAw',

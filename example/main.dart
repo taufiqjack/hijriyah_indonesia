@@ -47,7 +47,9 @@ class _HomeViewState extends State<HomeView> {
       ),
       body: Center(
         child: Text(
-          Hijriyah.fromDate(DateTime.parse('2024-08-23').toLocal())
+          //to activated pasaran name using isPasaran : true
+          Hijriyah.fromDate(DateTime.parse('2024-08-23').toLocal(),
+                  isPasaran: true)
               .toFormat("EEEE, dd MMMM yyyy"),
           style: const TextStyle(color: Colors.white),
         ), /* converter to hijriyah indonesia */
