@@ -12,6 +12,35 @@ const Map<int, String> monthNames = {
   11: 'Zulkaidah',
   12: 'Zulhijjah'
 };
+const Map<int, String> javaMonthNames = {
+  1: 'Suro',
+  2: 'Sapar',
+  3: 'Mulud',
+  4: 'Bakda Mulud',
+  5: 'Jumadil Awal',
+  6: 'Jumadil Akir',
+  7: 'Rejeb',
+  8: 'Ruwah',
+  9: 'Pasa',
+  10: 'Sawal',
+  11: 'Dulkaidah',
+  12: 'Besar'
+};
+
+const Map<int, String> javaMonthShortNames = {
+  1: 'Sur',
+  2: 'Sap',
+  3: 'Mul',
+  4: 'Bakd',
+  5: 'JumAw',
+  6: 'JumAk',
+  7: 'Rej',
+  8: 'Ruw',
+  9: 'Pas',
+  10: 'Saw',
+  11: 'Dulk',
+  12: 'Bes'
+};
 
 const Map<int, String> pasaranNames = {
   1: 'Legi',
@@ -162,6 +191,25 @@ const Map<int, String> idShortWdNames = {
   4: "KAM",
   5: "JUM",
   6: "SAB"
+};
+const Map<int, String> jvWdNames = {
+  7: "NGAHAD",
+  1: "SENEN",
+  2: "SELASA",
+  3: "REBO",
+  4: "KEMIS",
+  5: "JEMUWAH",
+  6: "SETU"
+};
+
+const Map<int, String> jvShortWdNames = {
+  7: "NGAD",
+  1: "SEN",
+  2: "SEL",
+  3: "REB",
+  4: "KEM",
+  5: "JEM",
+  6: "SET"
 };
 
 const Map<int, String> arWkNames = {

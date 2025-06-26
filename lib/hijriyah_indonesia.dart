@@ -7,6 +7,7 @@ import 'hijriyah_array.dart';
 class Hijriyah {
   static String language = 'en';
   bool? pasaran;
+  bool? jv;
   late int lengthOfMonth;
   DateTime startKHGT = DateTime(2024, 7, 7);
   int hDay = 1;
@@ -18,6 +19,7 @@ class Hijriyah {
   late String shortMonthName;
   late String dayWeName;
   late String pasaranName;
+  late bool javanese;
   Map<int, int>? adjustments;
 
   static final Map<String, Map<String, Map<int, String>>> _local = {
@@ -25,13 +27,21 @@ class Hijriyah {
       'long': monthNames,
       'short': monthShortNames,
       'days': wdNames,
-      'short_days': shortWdNames
+      'short_days': shortWdNames,
+      'pasaran': pasaranNames
     },
     'id': {
       'long': idMonthNames,
       'short': idMonthShortNames,
       'days': idWdNames,
       'short_days': idShortWdNames,
+      'pasaran': pasaranNames
+    },
+    'jv': {
+      'long': javaMonthNames,
+      'short': javaMonthShortNames,
+      'days': jvWdNames,
+      'short_days': jvShortWdNames,
       'pasaran': pasaranNames
     },
     'ar': {
@@ -229,6 +239,10 @@ class Hijriyah {
 
   bool isPasaran(bool value) {
     return pasaran = value;
+  }
+
+  bool isJavanese(bool value) {
+    return javanese = value;
   }
 
   String format(year, month, day, format) {

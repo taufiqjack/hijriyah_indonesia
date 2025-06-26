@@ -3,11 +3,11 @@ import 'package:hijriyah_indonesia/hijriyah_indonesia.dart';
 
 void main() {
   Hijriyah.setLocal('id');
-  debugPrint(Hijriyah.fromDate(DateTime.parse('2024-08-23').toLocal(),
-          isPasaran: false)
-      .toFormat("EE, dd MMMM yyyy")
-      .toString());
+  // Hijriyah.setLocal('jv'); //for javanese language
+  debugPrint(Hijriyah.fromDate(
+    DateTime.parse('2024-08-23'),
+  ).toFormat("EE, dd MMMM yyyy").toString());
 
-  debugPrint(Hijriyah.fromDate(DateTime.parse('2025-06-12'), isPasaran: true)
+  debugPrint(Hijriyah.fromDate(DateTime.parse('2025-06-16'), isPasaran: true)
       .fullDate());
 }
