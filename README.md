@@ -6,14 +6,25 @@
 #### Usage
 ```dart
 //Short Date
-debugPrint(Hijriyah.fromDate(DateTime.parse('2025-05-12').toLocal(),
+Hijriyah.fromDate(DateTime.parse('2026-10-10').toLocal(),
           isPasaran: false)
       .toFormat("EE, dd MMMM yyyy")
-      .toString());   // Kam, 16 Zulh 1446
+      .toString();   // Kam, 16 Zulh 1446
 
-//Full Date
-Hijriyah.fromDate(DateTime.parse('2025-06-12'), isPasaran: true)
-      .fullDate(); // Kamis Kliwon, 16 Zulhijah 1446
+
+// acehnese format
+Hijriyah.setLocal('ace');
+Hijriyah.fromDate(DateTime.parse('2026-10-10').toLocal()).toFormat("EE, dd MMMM yyyy").toString(); //Sat, 29 Moelot Teungoh 1448
+
+// pariamanese format
+Hijriyah.setLocal('pi');
+Hijriyah.fromDate(DateTime.parse('2026-10-10').toLocal()).toFormat("EE, dd MMMM yyyy").toString(); //Sat, 29 Adiak Muluik 1448
+
+
+//Full Date Javanesse
+Hijriyah.setLocal('jv');
+Hijriyah.fromDate(DateTime.parse('2026-10-10'), isPasaran: true)
+      .fullDate(); //Setu Kliwon, 29 Bakda Mulud 1448
 ```
 
 ##### Usage convert

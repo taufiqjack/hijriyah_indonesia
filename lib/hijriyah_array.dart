@@ -50,6 +50,65 @@ const Map<int, String> pasaranNames = {
   5: 'Kliwon',
 };
 
+const Map<int, String> acehMonthNames = {
+  1: 'Asan-Usen',
+  2: 'Sapha',
+  3: 'Moelot Phon',
+  4: 'Moelot Teungoh',
+  5: 'Moelot Akhe',
+  6: 'Khanduri Boh Kayee',
+  7: 'Khanduri Apam',
+  8: 'Khanduri Bu',
+  9: 'Puasa',
+  10: 'Uroe Raya',
+  11: 'Meuapet',
+  12: 'Haji'
+};
+
+const Map<int, String> acehMonthShortNames = {
+  1: 'AsaUn',
+  2: 'Saph',
+  3: 'MoePhon',
+  4: 'MoeTeu',
+  5: 'MoeAkhe',
+  6: 'KhanBohKa',
+  7: 'KhanApa',
+  8: 'KhanBu',
+  9: 'Puasa',
+  10: 'UrRaya',
+  11: 'Meuapet',
+  12: 'Haj'
+};
+const Map<int, String> pariamanMonthNames = {
+  1: 'Sura/Tabuik',
+  2: 'Sapa',
+  3: 'Muluik',
+  4: 'Adiak Muluik',
+  5: 'Muluik Kaduo',
+  6: 'Caghai/Carai',
+  7: 'Sambagheh',
+  8: 'Lamang',
+  9: 'Puaso',
+  10: 'Ghayo',
+  11: 'Adiak Ghayo',
+  12: 'Ghayo Aji'
+};
+
+const Map<int, String> pariamanMonthShortNames = {
+  1: 'Sur/Tab',
+  2: 'Sap',
+  3: 'Mul',
+  4: 'AdiMul',
+  5: 'MulKad',
+  6: 'Cag/Car',
+  7: 'Samb',
+  8: 'Lam',
+  9: 'Pua',
+  10: 'Gha',
+  11: 'AdiGha',
+  12: 'GhaAji'
+};
+
 const Map<int, String> monthShortNames = {
   1: 'Muh',
   2: 'Saf',
@@ -210,6 +269,44 @@ const Map<int, String> jvShortWdNames = {
   4: "KEM",
   5: "JEM",
   6: "SET"
+};
+const Map<int, String> acehWdNames = {
+  7: "ALEUHAD",
+  1: "SEULANYAN",
+  2: "SEULASA",
+  3: "RABU",
+  4: "HAMEH",
+  5: "JUM'AT",
+  6: "SATU"
+};
+
+const Map<int, String> acehShortWdNames = {
+  7: "ALE",
+  1: "SEULAN",
+  2: "SEULAS",
+  3: "RAB",
+  4: "HAM",
+  5: "JUM",
+  6: "SAT"
+};
+const Map<int, String> piWdNames = {
+  7: "AKAIK",
+  1: "SINAYAN",
+  2: "SILASA",
+  3: "RABA'A",
+  4: "KAMIH",
+  5: "JUMA'AIK",
+  6: "SATU"
+};
+
+const Map<int, String> piShortWdNames = {
+  7: "AKA",
+  1: "SIN",
+  2: "SIL",
+  3: "RAB",
+  4: "KAM",
+  5: "JUM",
+  6: "SAT"
 };
 
 const Map<int, String> arWkNames = {

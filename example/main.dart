@@ -3,6 +3,8 @@ import 'package:hijriyah_indonesia/hijriyah_indonesia.dart';
 
 String arabic = 'ar';
 String indonesia = 'id';
+String aceh = 'ace';
+String pariaman = 'pi';
 
 void main() {
   /* set locale add this */

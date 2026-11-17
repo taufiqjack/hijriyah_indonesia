@@ -44,6 +44,18 @@ class Hijriyah {
       'short_days': jvShortWdNames,
       'pasaran': pasaranNames
     },
+    'ace': {
+      'long': acehMonthNames,
+      'short': acehMonthShortNames,
+      'days': acehWdNames,
+      'short_days': acehShortWdNames,
+    },
+    'pi': {
+      'long': pariamanMonthNames,
+      'short': pariamanMonthShortNames,
+      'days': piWdNames,
+      'short_days': piShortWdNames,
+    },
     'ar': {
       'long': arMonthNames,
       'short': arMonthShortNames,
